@@ -48,3 +48,29 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+
+bindkey -e
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+eval "$(grunt --completion=zsh)"
+
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/helpfiles
+
+export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
+export M2_REPO="/Users/mafulafunk/.m2/repository"
+
+PATH=/usr/local/bin:${PATH/:\/usr\/local\/bin}
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
+alias qr='qrencode -t ansi256 '
+
+setopt auto_cd
+
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

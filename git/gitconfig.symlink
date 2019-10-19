@@ -15,7 +15,7 @@
         branch = auto
         ui = true
 [core]
-        excludesfile = ~/.gitignore
+	excludesfile = /Users/mafulafunk/.gitignore
         editor = vim
 [apply]
         whitespace = nowarn
@@ -33,3 +33,18 @@
         default = simple
 [credential]
 	helper = osxkeychain
+[user]
+	email = Martin@MartinFunk.de
+	name = Martin Funk
+[merge]
+	tool = kdiff3
+[diff]
+	guitool = kdiff3
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/m68funk/.stCommitMsg

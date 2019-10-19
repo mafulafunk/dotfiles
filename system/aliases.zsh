@@ -7,4 +7,6 @@ then
   alias l="gls -lAh --color"
   alias ll="gls -l --color"
   alias la='gls -A --color'
+  alias ltr='gls -lAhtr --color'
+  alias gtypist="export LANG=en_US.UTF-8 && gtypist -k -b -e 1 -l R11"
 fi

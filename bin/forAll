@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+for k in `find . -name "org.eclipse.jdt.*.prefs"`; do
+	rm -i "$k";
+done
